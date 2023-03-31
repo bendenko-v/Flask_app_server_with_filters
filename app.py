@@ -24,7 +24,8 @@ def perform_query() -> Response:
             value=query['value'],
             data=result
         )
-
+    if not result:
+        return app.response_class('', status=200)
     return app.response_class('\n'.join(result), status=200)
 
 

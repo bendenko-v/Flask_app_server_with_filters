@@ -1,6 +1,6 @@
 # SkyPro / Homework 24
 
-Web server on Flask with marshmallow validation, which:
+Web server on Flask with typing and annotation of all methods and queries validation with marshmallow, which:
 1) "Repeats" the functionality of the Linux command line for processing files.
 2) Сonsists of one POST method. The method meets the following requirements:
    * Available on the path "/perform_query"

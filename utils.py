@@ -1,6 +1,6 @@
 import os
 import re
-from typing import Optional, List, Generator, Any
+from typing import Optional, List, Generator, Any, Dict, Callable
 
 from flask import abort
 
@@ -94,7 +94,7 @@ def regex_data(data: List[str], regexp: str) -> List[str]:
     return result
 
 
-CMD_TO_FUNC = {
+CMD_TO_FUNC: Dict[str, Callable] = {
     'filter': filter_data,
     'map': map_data,
     'unique': unique_data,
